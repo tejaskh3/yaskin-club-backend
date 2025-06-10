@@ -3,7 +3,7 @@ import express, { Request, Response, Application } from "express";
 const app: Application = express();
 
 app.get("/health", (req: Request, res: Response) => {
-  res.status(200).json({ message: "OK" });
+  res.status(200).json({ message: "🎉 Yaskin Club backend is running!" });
 });
 
 app.listen(3000, () => {
