@@ -13,7 +13,12 @@ const genAI = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: [
+    'http://localhost:5173',
+    'https://www.yaskin.club',
+    'https://yaskin.club',
+    'https://yaskin-club-frontend.vercel.app'
+  ],
   credentials: true
 }));
 app.use(express.json());
